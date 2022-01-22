@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		427E8E0A279C635400F2DF3E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 427E8E09279C635400F2DF3E /* Launch Screen.storyboard */; };
 		428400F32799AFD300DDD871 /* ComicsReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428400F22799AFD300DDD871 /* ComicsReaderApp.swift */; };
 		428400F52799AFD300DDD871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428400F42799AFD300DDD871 /* ContentView.swift */; };
 		428400F72799AFD600DDD871 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 428400F62799AFD600DDD871 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		427E8E09279C635400F2DF3E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		428400EF2799AFD300DDD871 /* ComicsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComicsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		428400F22799AFD300DDD871 /* ComicsReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsReaderApp.swift; sourceTree = "<group>"; };
 		428400F42799AFD300DDD871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				428400F22799AFD300DDD871 /* ComicsReaderApp.swift */,
 				428400F42799AFD300DDD871 /* ContentView.swift */,
 				428400F62799AFD600DDD871 /* Assets.xcassets */,
+				427E8E09279C635400F2DF3E /* Launch Screen.storyboard */,
 				428400F82799AFD600DDD871 /* Preview Content */,
 			);
 			path = ComicsReader;
@@ -237,6 +240,7 @@
 			files = (
 				4284011E2799CC0800DDD871 /* .swiftlint.yml in Resources */,
 				428400FA2799AFD600DDD871 /* Preview Assets.xcassets in Resources */,
+				427E8E0A279C635400F2DF3E /* Launch Screen.storyboard in Resources */,
 				428400F72799AFD600DDD871 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
