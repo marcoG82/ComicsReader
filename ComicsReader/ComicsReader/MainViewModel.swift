@@ -7,9 +7,10 @@
 
 import Foundation
 import Combine
+import ShortcutFoundation
 
 class MainViewModel: ObservableObject {
-    private let api = NetworkLayer()
+    @Inject var api: NetworkLayer
     @Published var filterString = String()
     @Published var filterIssue = 0
     @Published var error: NetworkLayer.Error?

@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import UIKit
 
-struct NetworkLayer {
+struct NetworkLayer: NetworkLayerProtocol {
     
     /// API Errors.
     enum Error: LocalizedError, Identifiable {
