@@ -33,8 +33,6 @@
 		428400F72799AFD600DDD871 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 428400F62799AFD600DDD871 /* Assets.xcassets */; };
 		428400FA2799AFD600DDD871 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 428400F92799AFD600DDD871 /* Preview Assets.xcassets */; };
 		428401042799AFD600DDD871 /* ComicsReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428401032799AFD600DDD871 /* ComicsReaderTests.swift */; };
-		4284010E2799AFD600DDD871 /* ComicsReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284010D2799AFD600DDD871 /* ComicsReaderUITests.swift */; };
-		428401102799AFD600DDD871 /* ComicsReaderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284010F2799AFD600DDD871 /* ComicsReaderUITestsLaunchTests.swift */; };
 		4284011E2799CC0800DDD871 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4284011D2799CC0800DDD871 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
@@ -82,8 +80,6 @@
 		428400FF2799AFD600DDD871 /* ComicsReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComicsReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		428401032799AFD600DDD871 /* ComicsReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsReaderTests.swift; sourceTree = "<group>"; };
 		428401092799AFD600DDD871 /* ComicsReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComicsReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4284010D2799AFD600DDD871 /* ComicsReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsReaderUITests.swift; sourceTree = "<group>"; };
-		4284010F2799AFD600DDD871 /* ComicsReaderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsReaderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4284011D2799CC0800DDD871 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,7 +141,6 @@
 				426C2B7E27A02B1200FA498D /* Endpoints.swift */,
 				428400F12799AFD300DDD871 /* ComicsReader */,
 				428401022799AFD600DDD871 /* ComicsReaderTests */,
-				4284010C2799AFD600DDD871 /* ComicsReaderUITests */,
 				4284011D2799CC0800DDD871 /* .swiftlint.yml */,
 				428400F02799AFD300DDD871 /* Products */,
 			);
@@ -193,15 +188,6 @@
 				428401032799AFD600DDD871 /* ComicsReaderTests.swift */,
 			);
 			path = ComicsReaderTests;
-			sourceTree = "<group>";
-		};
-		4284010C2799AFD600DDD871 /* ComicsReaderUITests */ = {
-			isa = PBXGroup;
-			children = (
-				4284010D2799AFD600DDD871 /* ComicsReaderUITests.swift */,
-				4284010F2799AFD600DDD871 /* ComicsReaderUITestsLaunchTests.swift */,
-			);
-			path = ComicsReaderUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,8 +385,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4284010E2799AFD600DDD871 /* ComicsReaderUITests.swift in Sources */,
-				428401102799AFD600DDD871 /* ComicsReaderUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

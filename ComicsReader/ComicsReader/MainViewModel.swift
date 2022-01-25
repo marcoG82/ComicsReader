@@ -44,17 +44,19 @@ class MainViewModel: ObservableObject {
                 }
             }, receiveValue: { comics in
                 for comic in comics {
-                    self.allComics.append(IdentifiableComic(month: comic.month,
-                                                            num: comic.num,
-                                                            link: comic.link,
-                                                            year: comic.year,
-                                                            news: comic.news,
-                                                            safe_title: comic.safe_title,
-                                                            transcript: comic.transcript,
-                                                            alt: comic.alt,
-                                                            img: comic.img,
-                                                            title: comic.title,
-                                                            day: comic.day))
+                    self.allComics.append(
+                        IdentifiableComic(
+                            month: comic.month,
+                            num: comic.num,
+                            link: comic.link,
+                            year: comic.year,
+                            news: comic.news,
+                            safe_title: comic.safe_title,
+                            transcript: comic.transcript,
+                            alt: comic.alt,
+                            img: comic.img,
+                            title: comic.title,
+                            day: comic.day))
                 }
                 self.error = nil
             })
