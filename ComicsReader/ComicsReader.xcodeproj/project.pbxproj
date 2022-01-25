@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42638D68279E891300CE97EE /* FullScreenImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42638D67279E891300CE97EE /* FullScreenImageView.swift */; };
+		42638D6A279EC7F100CE97EE /* SearchSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42638D69279EC7F100CE97EE /* SearchSettings.swift */; };
+		42638D6C279EC92B00CE97EE /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42638D6B279EC92B00CE97EE /* SearchView.swift */; };
+		42638D70279EC9D100CE97EE /* ListCellHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42638D6F279EC9D100CE97EE /* ListCellHeaderView.swift */; };
+		42638D72279EC9FF00CE97EE /* ListCellContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42638D71279EC9FF00CE97EE /* ListCellContentView.swift */; };
+		42638D74279ECA2C00CE97EE /* ListCellButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42638D73279ECA2C00CE97EE /* ListCellButtonView.swift */; };
+		42638D76279ECC5900CE97EE /* CTAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42638D75279ECC5900CE97EE /* CTAButton.swift */; };
 		427E8E10279D6B8200F2DF3E /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E8E0F279D6B8200F2DF3E /* Comic.swift */; };
 		427E8E11279D6B8200F2DF3E /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E8E0F279D6B8200F2DF3E /* Comic.swift */; };
 		427E8E13279D8D9C00F2DF3E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E8E12279D8D9C00F2DF3E /* MainViewModel.swift */; };
 		427E8E14279D8D9C00F2DF3E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E8E12279D8D9C00F2DF3E /* MainViewModel.swift */; };
 		427E8E16279D912D00F2DF3E /* DateBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E8E15279D912D00F2DF3E /* DateBadge.swift */; };
-		427E8E17279D912D00F2DF3E /* DateBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E8E15279D912D00F2DF3E /* DateBadge.swift */; };
 		427E8E24279DDC0C00F2DF3E /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E8E23279DDC0C00F2DF3E /* NetworkLayer.swift */; };
+		427E8E2A279DE19C00F2DF3E /* ShortcutFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 427E8E29279DE19C00F2DF3E /* ShortcutFoundation */; };
+		427E8E2C279DE51C00F2DF3E /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E8E2B279DE51C00F2DF3E /* AppConfig.swift */; };
 		428400F32799AFD300DDD871 /* ComicsReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428400F22799AFD300DDD871 /* ComicsReaderApp.swift */; };
 		428400F52799AFD300DDD871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428400F42799AFD300DDD871 /* ContentView.swift */; };
 		428400F72799AFD600DDD871 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 428400F62799AFD600DDD871 /* Assets.xcassets */; };
@@ -42,11 +50,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		427E8E0B279C659400F2DF3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42638D67279E891300CE97EE /* FullScreenImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageView.swift; sourceTree = "<group>"; };
+		42638D69279EC7F100CE97EE /* SearchSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSettings.swift; sourceTree = "<group>"; };
+		42638D6B279EC92B00CE97EE /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		42638D6F279EC9D100CE97EE /* ListCellHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellHeaderView.swift; sourceTree = "<group>"; };
+		42638D71279EC9FF00CE97EE /* ListCellContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellContentView.swift; sourceTree = "<group>"; };
+		42638D73279ECA2C00CE97EE /* ListCellButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellButtonView.swift; sourceTree = "<group>"; };
+		42638D75279ECC5900CE97EE /* CTAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAButton.swift; sourceTree = "<group>"; };
 		427E8E0F279D6B8200F2DF3E /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
 		427E8E12279D8D9C00F2DF3E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		427E8E15279D912D00F2DF3E /* DateBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateBadge.swift; sourceTree = "<group>"; };
 		427E8E23279DDC0C00F2DF3E /* NetworkLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkLayer.swift; path = ComicsReader/NetworkLayer.swift; sourceTree = "<group>"; };
+		427E8E2B279DE51C00F2DF3E /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		428400EF2799AFD300DDD871 /* ComicsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComicsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		428400F22799AFD300DDD871 /* ComicsReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsReaderApp.swift; sourceTree = "<group>"; };
 		428400F42799AFD300DDD871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				427E8E2A279DE19C00F2DF3E /* ShortcutFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +101,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42638D6D279EC93C00CE97EE /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				42638D6B279EC92B00CE97EE /* SearchView.swift */,
+				42638D69279EC7F100CE97EE /* SearchSettings.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		42638D6E279EC96300CE97EE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				428400F42799AFD300DDD871 /* ContentView.swift */,
+				427E8E15279D912D00F2DF3E /* DateBadge.swift */,
+				42638D6F279EC9D100CE97EE /* ListCellHeaderView.swift */,
+				42638D71279EC9FF00CE97EE /* ListCellContentView.swift */,
+				42638D73279ECA2C00CE97EE /* ListCellButtonView.swift */,
+				42638D67279E891300CE97EE /* FullScreenImageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		428400E62799AFD300DDD871 = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +131,6 @@
 				428401022799AFD600DDD871 /* ComicsReaderTests */,
 				4284010C2799AFD600DDD871 /* ComicsReaderUITests */,
 				4284011D2799CC0800DDD871 /* .swiftlint.yml */,
-				427E8E0B279C659400F2DF3E /* Info.plist */,
 				428400F02799AFD300DDD871 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,12 +149,14 @@
 			isa = PBXGroup;
 			children = (
 				428400F22799AFD300DDD871 /* ComicsReaderApp.swift */,
-				428400F42799AFD300DDD871 /* ContentView.swift */,
-				428400F62799AFD600DDD871 /* Assets.xcassets */,
-				428400F82799AFD600DDD871 /* Preview Content */,
+				42638D6E279EC96300CE97EE /* Views */,
+				42638D6D279EC93C00CE97EE /* Search */,
 				427E8E0F279D6B8200F2DF3E /* Comic.swift */,
-				427E8E15279D912D00F2DF3E /* DateBadge.swift */,
+				42638D75279ECC5900CE97EE /* CTAButton.swift */,
 				427E8E12279D8D9C00F2DF3E /* MainViewModel.swift */,
+				427E8E2B279DE51C00F2DF3E /* AppConfig.swift */,
+				428400F82799AFD600DDD871 /* Preview Content */,
+				428400F62799AFD600DDD871 /* Assets.xcassets */,
 			);
 			path = ComicsReader;
 			sourceTree = "<group>";
@@ -165,6 +204,7 @@
 			);
 			name = ComicsReader;
 			packageProductDependencies = (
+				427E8E29279DE19C00F2DF3E /* ShortcutFoundation */,
 			);
 			productName = ComicsReader;
 			productReference = 428400EF2799AFD300DDD871 /* ComicsReader.app */;
@@ -239,6 +279,7 @@
 			);
 			mainGroup = 428400E62799AFD300DDD871;
 			packageReferences = (
+				427E8E28279DE19C00F2DF3E /* XCRemoteSwiftPackageReference "shortcut-foundation-ios" */,
 			);
 			productRefGroup = 428400F02799AFD300DDD871 /* Products */;
 			projectDirPath = "";
@@ -303,11 +344,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42638D6C279EC92B00CE97EE /* SearchView.swift in Sources */,
+				42638D74279ECA2C00CE97EE /* ListCellButtonView.swift in Sources */,
 				427E8E24279DDC0C00F2DF3E /* NetworkLayer.swift in Sources */,
+				42638D72279EC9FF00CE97EE /* ListCellContentView.swift in Sources */,
+				42638D76279ECC5900CE97EE /* CTAButton.swift in Sources */,
 				427E8E13279D8D9C00F2DF3E /* MainViewModel.swift in Sources */,
 				427E8E10279D6B8200F2DF3E /* Comic.swift in Sources */,
+				42638D70279EC9D100CE97EE /* ListCellHeaderView.swift in Sources */,
+				427E8E2C279DE51C00F2DF3E /* AppConfig.swift in Sources */,
 				428400F52799AFD300DDD871 /* ContentView.swift in Sources */,
+				42638D68279E891300CE97EE /* FullScreenImageView.swift in Sources */,
 				428400F32799AFD300DDD871 /* ComicsReaderApp.swift in Sources */,
+				42638D6A279EC7F100CE97EE /* SearchSettings.swift in Sources */,
 				427E8E16279D912D00F2DF3E /* DateBadge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,7 +365,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				427E8E17279D912D00F2DF3E /* DateBadge.swift in Sources */,
 				427E8E11279D6B8200F2DF3E /* Comic.swift in Sources */,
 				428401042799AFD600DDD871 /* ComicsReaderTests.swift in Sources */,
 				427E8E14279D8D9C00F2DF3E /* MainViewModel.swift in Sources */,
@@ -476,7 +524,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ComicsReader/Info.plist;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -485,7 +532,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = stc.marco.com.ComicsReader;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marco.stc.ComicsReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -505,7 +552,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ComicsReader/Info.plist;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -514,7 +560,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = stc.marco.com.ComicsReader;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marco.stc.ComicsReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -638,6 +684,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		427E8E28279DE19C00F2DF3E /* XCRemoteSwiftPackageReference "shortcut-foundation-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/shortcut/shortcut-foundation-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		427E8E29279DE19C00F2DF3E /* ShortcutFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 427E8E28279DE19C00F2DF3E /* XCRemoteSwiftPackageReference "shortcut-foundation-ios" */;
+			productName = ShortcutFoundation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 428400E72799AFD300DDD871 /* Project object */;
 }
