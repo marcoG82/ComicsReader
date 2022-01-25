@@ -7,7 +7,6 @@
 
 import Foundation
 import Combine
-import UIKit
 
 struct NetworkLayer {
     
@@ -80,12 +79,5 @@ struct NetworkLayer {
     private func indexes() -> [Int] {
         let indexes: [Int] = (0..<maxComics).map { _ in .random(in: 1...2570) }
         return indexes.sorted(by: >).uniqued()
-    }
-}
-
-extension Sequence where Element: Hashable {
-    func uniqued() -> [Element] {
-        var set = Set<Element>()
-        return filter { set.insert($0).inserted }
     }
 }
