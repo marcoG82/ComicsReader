@@ -43,8 +43,11 @@ Following the LifesumStyleGuide ... and Gabriel's teachings:
 Clone the repository in a local folder and open it with XCode 12+
 
 Repository link:
+
 HTTPS      --> https://github.com/marcoG82/ComicsReader.git
+
 SSH        --> git@github.com:marcoG82/ComicsReader.git
+
 GitHub CLI --> gh repo clone marcoG82/ComicsReader
 
 
@@ -52,7 +55,7 @@ GitHub CLI --> gh repo clone marcoG82/ComicsReader
 
 1. Clone the repository
 2. Create your feature branch
-3. Open the `Package.swift` file
+3. Open the `ComicsReader.xcodeproj` file
 4. Perform your changes, debug, run the unit tests
 5. Make sure that all the tests pass and there are no Xcode warnings or lint issues
 6. Open a pull request
