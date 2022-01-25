@@ -11,7 +11,7 @@ import ShortcutFoundation
 
 @main
 struct ComicsReaderApp: App {
-//    let context = Context(AppDependencies.configs as! Config)
+    let context = Context(AppConfig())
     let viewModel = MainViewModel()
     let searchSettings = SearchSettings()
     @StateObject private var comicsStore: ComicsStore

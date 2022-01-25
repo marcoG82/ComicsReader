@@ -11,8 +11,7 @@ import ShortcutFoundation
 import ComicReaderNetwork
 
 class MainViewModel: ObservableObject {
-//    @Inject var api: CRNetworkLayerProtocol
-    let api = NetworkLayer()
+    @Inject var api: NetworkLayer
     @Published var filterString = String()
     @Published var filterIssue = 0
     @Published var error: Error?

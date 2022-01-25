@@ -19,6 +19,7 @@
 		426C2B8127A0301B00FA498D /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426C2B8027A0301B00FA498D /* AppDependencies.swift */; };
 		426C2B8327A0481900FA498D /* IdentifiableComic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426C2B8227A0481900FA498D /* IdentifiableComic.swift */; };
 		426C2B9227A064EC00FA498D /* ComicReaderNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 426C2B9127A064EC00FA498D /* ComicReaderNetwork */; };
+		426C2B9B27A0860300FA498D /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426C2B9A27A0860300FA498D /* AppConfig.swift */; };
 		427E8E13279D8D9C00F2DF3E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E8E12279D8D9C00F2DF3E /* MainViewModel.swift */; };
 		427E8E14279D8D9C00F2DF3E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E8E12279D8D9C00F2DF3E /* MainViewModel.swift */; };
 		427E8E16279D912D00F2DF3E /* DateBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E8E15279D912D00F2DF3E /* DateBadge.swift */; };
@@ -61,6 +62,7 @@
 		42638D7B279FE51800CE97EE /* ComicStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicStore.swift; sourceTree = "<group>"; };
 		426C2B8027A0301B00FA498D /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 		426C2B8227A0481900FA498D /* IdentifiableComic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableComic.swift; sourceTree = "<group>"; };
+		426C2B9A27A0860300FA498D /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		427E8E12279D8D9C00F2DF3E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		427E8E15279D912D00F2DF3E /* DateBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateBadge.swift; sourceTree = "<group>"; };
 		427E8E2B279DE51C00F2DF3E /* NetworkLayerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerConfig.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				42638D7B279FE51800CE97EE /* ComicStore.swift */,
 				427E8E2B279DE51C00F2DF3E /* NetworkLayerConfig.swift */,
 				426C2B8027A0301B00FA498D /* AppDependencies.swift */,
+				426C2B9A27A0860300FA498D /* AppConfig.swift */,
 				428400F82799AFD600DDD871 /* Preview Content */,
 				428400F62799AFD600DDD871 /* Assets.xcassets */,
 			);
@@ -357,6 +360,7 @@
 				426C2B8127A0301B00FA498D /* AppDependencies.swift in Sources */,
 				42638D70279EC9D100CE97EE /* ListCellHeaderView.swift in Sources */,
 				427E8E2C279DE51C00F2DF3E /* NetworkLayerConfig.swift in Sources */,
+				426C2B9B27A0860300FA498D /* AppConfig.swift in Sources */,
 				428400F52799AFD300DDD871 /* ContentView.swift in Sources */,
 				42638D68279E891300CE97EE /* FullScreenImageView.swift in Sources */,
 				428400F32799AFD300DDD871 /* ComicsReaderApp.swift in Sources */,
