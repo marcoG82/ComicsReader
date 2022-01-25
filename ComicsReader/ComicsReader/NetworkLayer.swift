@@ -12,7 +12,7 @@ import UIKit
 struct NetworkLayer {
     
     /// API Errors.
-    public enum Error: LocalizedError, Identifiable {
+    enum Error: LocalizedError, Identifiable {
         var id: String { localizedDescription }
         
         case addressUnreachable(URL)
@@ -51,7 +51,7 @@ struct NetworkLayer {
     
     private let apiQueue = DispatchQueue(label: "NetworkLayer", qos: .default, attributes: .concurrent)
     
-    func comic(num: Int) -> AnyPublisher<Comic, Error> {
+    private func comic(num: Int) -> AnyPublisher<Comic, Error> {
         URLSession.shared.dataTaskPublisher(for: EndPoint.comic(num).url)
             .receive(on: apiQueue)
             .map { $0.data }
@@ -66,7 +66,7 @@ struct NetworkLayer {
             .eraseToAnyPublisher()
     }
     
-    func exampleComic() -> AnyPublisher<Comic, Error> {
+    private func exampleComic() -> AnyPublisher<Comic, Error> {
         URLSession.shared.dataTaskPublisher(for: EndPoint.example.url)
             .receive(on: apiQueue)
             .map { $0.0 }
@@ -81,7 +81,7 @@ struct NetworkLayer {
             .eraseToAnyPublisher()
     }
     
-    func mergedComics(nums comicNums: [Int]) -> AnyPublisher<Comic, Error> {
+    private func mergedComics(nums comicNums: [Int]) -> AnyPublisher<Comic, Error> {
         let comicNums = Array(comicNums.prefix(maxComics))
 
         precondition(!comicNums.isEmpty)
