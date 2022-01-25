@@ -697,7 +697,7 @@
 			repositoryURL = "https://github.com/marcoG82/ComicReaderNetwork.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.3;
+				minimumVersion = 1.0.4;
 			};
 		};
 		427E8E28279DE19C00F2DF3E /* XCRemoteSwiftPackageReference "shortcut-foundation-ios" */ = {
