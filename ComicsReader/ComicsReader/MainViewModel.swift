@@ -13,11 +13,7 @@ class MainViewModel: ObservableObject {
     @Published var filterString = String()
     @Published var filterIssue = 0
     @Published var error: NetworkLayer.Error?
-    @Published private var allComics = [IdentifiableComic]() {
-        didSet {
-            print(allComics.count)
-        }
-    }
+    @Published private var allComics = [IdentifiableComic]()
     private var subriscrions = Set<AnyCancellable>()
     
     var comics: [IdentifiableComic] {
@@ -46,11 +42,17 @@ class MainViewModel: ObservableObject {
                 }
             }, receiveValue: { comics in
                 for comic in comics {
-                    if comic.num == 2571 {
-                        self.allComics.insert(IdentifiableComic(comic), at: 0)
-                    } else {
-                        self.allComics.append(IdentifiableComic(comic))
-                    }
+                    self.allComics.append(IdentifiableComic(month: comic.month,
+                                                            num: comic.num,
+                                                            link: comic.link,
+                                                            year: comic.year,
+                                                            news: comic.news,
+                                                            safe_title: comic.safe_title,
+                                                            transcript: comic.transcript,
+                                                            alt: comic.alt,
+                                                            img: comic.img,
+                                                            title: comic.title,
+                                                            day: comic.day))
                 }
                 self.error = nil
             })

@@ -27,11 +27,11 @@ struct ContentView: View {
             List {
                 Section(header: Text(filter).padding(.leading, -10)) {
                     ForEach(self.model.comics) { comic in
-                        NavigationLink(destination: FullScreenImageView(imageUrl: comic.img)) {
+                        NavigationLink(destination: FullScreenImageView(imageUrl: comic.img, comicImage: nil)) {
                             VStack(alignment: .leading, spacing: 4) {
                                 ListCellHeaderView(comic: comic)
                                 ListCellContentView(comic: comic)
-                                ListCellButtonView(comic: comic)
+                                ListCellButtonView(comic: comic, model: model)
                             }
                         }
                         .padding()
@@ -64,11 +64,10 @@ struct ContentView: View {
                 leading: Button("Search") {
                     presentingSearchSheet = true
                 },
-                trailing: Button("Favorites") {
+                trailing: NavigationLink(destination: FavoriteView()) {
+                    Text("Favorites")
                 })
         }
-//        Rectangle
-        
     }
 }
 

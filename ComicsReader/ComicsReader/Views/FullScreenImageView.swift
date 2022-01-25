@@ -8,15 +8,20 @@
 import SwiftUI
 
 struct FullScreenImageView: View {
-    let imageUrl: String
+    let imageUrl: String?
+    let comicImage: UIImage?
     
     var body: some View {
         ScrollView([.horizontal, .vertical]) {
-            AsyncImage(url: URL(string: imageUrl)) { image in
-                image
-                    .renderingMode(.original)
-            } placeholder: {
-                ProgressView()
+            if let url = imageUrl {
+                AsyncImage(url: URL(string: url)) { image in
+                    image
+                        .renderingMode(.original)
+                } placeholder: {
+                    ProgressView()
+                }
+            } else if let image = comicImage {
+                Image(uiImage: image)
             }
         }
     }

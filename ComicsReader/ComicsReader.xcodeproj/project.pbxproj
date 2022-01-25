@@ -14,6 +14,8 @@
 		42638D72279EC9FF00CE97EE /* ListCellContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42638D71279EC9FF00CE97EE /* ListCellContentView.swift */; };
 		42638D74279ECA2C00CE97EE /* ListCellButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42638D73279ECA2C00CE97EE /* ListCellButtonView.swift */; };
 		42638D76279ECC5900CE97EE /* CTAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42638D75279ECC5900CE97EE /* CTAButton.swift */; };
+		42638D7A279FE15400CE97EE /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42638D79279FE15400CE97EE /* FavoriteView.swift */; };
+		42638D7C279FE51800CE97EE /* ComicStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42638D7B279FE51800CE97EE /* ComicStore.swift */; };
 		427E8E10279D6B8200F2DF3E /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E8E0F279D6B8200F2DF3E /* Comic.swift */; };
 		427E8E11279D6B8200F2DF3E /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E8E0F279D6B8200F2DF3E /* Comic.swift */; };
 		427E8E13279D8D9C00F2DF3E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E8E12279D8D9C00F2DF3E /* MainViewModel.swift */; };
@@ -57,6 +59,8 @@
 		42638D71279EC9FF00CE97EE /* ListCellContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellContentView.swift; sourceTree = "<group>"; };
 		42638D73279ECA2C00CE97EE /* ListCellButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellButtonView.swift; sourceTree = "<group>"; };
 		42638D75279ECC5900CE97EE /* CTAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAButton.swift; sourceTree = "<group>"; };
+		42638D79279FE15400CE97EE /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		42638D7B279FE51800CE97EE /* ComicStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicStore.swift; sourceTree = "<group>"; };
 		427E8E0F279D6B8200F2DF3E /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
 		427E8E12279D8D9C00F2DF3E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		427E8E15279D912D00F2DF3E /* DateBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateBadge.swift; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				428400F42799AFD300DDD871 /* ContentView.swift */,
+				42638D79279FE15400CE97EE /* FavoriteView.swift */,
 				427E8E15279D912D00F2DF3E /* DateBadge.swift */,
 				42638D6F279EC9D100CE97EE /* ListCellHeaderView.swift */,
 				42638D71279EC9FF00CE97EE /* ListCellContentView.swift */,
@@ -154,6 +159,7 @@
 				427E8E0F279D6B8200F2DF3E /* Comic.swift */,
 				42638D75279ECC5900CE97EE /* CTAButton.swift */,
 				427E8E12279D8D9C00F2DF3E /* MainViewModel.swift */,
+				42638D7B279FE51800CE97EE /* ComicStore.swift */,
 				427E8E2B279DE51C00F2DF3E /* AppConfig.swift */,
 				428400F82799AFD600DDD871 /* Preview Content */,
 				428400F62799AFD600DDD871 /* Assets.xcassets */,
@@ -347,6 +353,7 @@
 				42638D6C279EC92B00CE97EE /* SearchView.swift in Sources */,
 				42638D74279ECA2C00CE97EE /* ListCellButtonView.swift in Sources */,
 				427E8E24279DDC0C00F2DF3E /* NetworkLayer.swift in Sources */,
+				42638D7C279FE51800CE97EE /* ComicStore.swift in Sources */,
 				42638D72279EC9FF00CE97EE /* ListCellContentView.swift in Sources */,
 				42638D76279ECC5900CE97EE /* CTAButton.swift in Sources */,
 				427E8E13279D8D9C00F2DF3E /* MainViewModel.swift in Sources */,
@@ -357,6 +364,7 @@
 				42638D68279E891300CE97EE /* FullScreenImageView.swift in Sources */,
 				428400F32799AFD300DDD871 /* ComicsReaderApp.swift in Sources */,
 				42638D6A279EC7F100CE97EE /* SearchSettings.swift in Sources */,
+				42638D7A279FE15400CE97EE /* FavoriteView.swift in Sources */,
 				427E8E16279D912D00F2DF3E /* DateBadge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

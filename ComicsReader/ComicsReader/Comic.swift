@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Comic: Codable {
     let month: String
@@ -34,20 +35,6 @@ struct IdentifiableComic: Identifiable {
     let img: String
     let title: String
     let day: String
-    
-    init(_ comic: Comic) {
-        self.month = comic.month
-        self.num = comic.num
-        self.link = comic.link
-        self.year = comic.year
-        self.news = comic.news
-        self.safe_title = comic.safe_title
-        self.transcript = comic.transcript
-        self.alt = comic.alt
-        self.img = comic.img
-        self.title = comic.title
-        self.day = comic.day
-    }
 }
 
 extension Comic: Comparable {
