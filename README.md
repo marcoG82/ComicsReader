@@ -14,7 +14,7 @@ Available at https://github.com/marcoG82/ComicsReader
         text is performed on comic title, explanation and transcript; this last one is not showed 
         in the app) 
 - [x] Implemented with Swift, Combine and SwiftUI
-- [x] Making usage of Dependency Injection by kind allowance from Shortcut ... Thanks a lot
+- [x] Making use of Shortcut Dependency Injection by kind allowance from Gabriel ... Thanks a lot
 
 ## Requirements
 
