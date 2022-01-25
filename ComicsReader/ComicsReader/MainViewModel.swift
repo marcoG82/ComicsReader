@@ -10,10 +10,11 @@ import Combine
 import ShortcutFoundation
 
 class MainViewModel: ObservableObject {
-    @Inject var api: NetworkLayer
+//    @Inject var api: CRNetworkLayerProtocol
+    let api = NetworkLayer()
     @Published var filterString = String()
     @Published var filterIssue = 0
-    @Published var error: NetworkLayer.Error?
+    @Published var error: Error?
     @Published private var allComics = [IdentifiableComic]()
     private var subriscrions = Set<AnyCancellable>()
     
@@ -34,7 +35,7 @@ class MainViewModel: ObservableObject {
     
     func fetchComics() {
         api
-            .comics()
+            .getComics()
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 if case .failure(let error) = completion {

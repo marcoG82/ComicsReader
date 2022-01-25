@@ -9,42 +9,10 @@ import Foundation
 import Combine
 import UIKit
 
-struct NetworkLayer: NetworkLayerProtocol {
-    
-    /// API Errors.
-    enum Error: LocalizedError, Identifiable {
-        var id: String { localizedDescription }
-        
-        case addressUnreachable(URL)
-        case invalidResponse
-        
-        var errorDescription: String? {
-            switch self {
-            case .invalidResponse: return "Invalid response from server."
-            case .addressUnreachable(let url): return "\(url.absoluteString) is unreachable."
-            }
-        }
-    }
-    
-    /// API endpoints.
-    enum EndPoint {
-        static let baseURL = URL(string: "https://xkcd.com/")!
-        
-        case example
-        case comic(Int)
-        
-        var url: URL {
-            switch self {
-            case .example:
-                return EndPoint.baseURL.appendingPathComponent("info.0.json")
-            case .comic(let num):
-                return EndPoint.baseURL.appendingPathComponent("\(num)/info.0.json")
-            }
-        }
-    }
+struct NetworkLayer {
     
     /// Maximum number of comics to fetch (reduce for lower API strain during development).
-    var maxComics = 10
+    private var maxComics = 10
     
     /// A shared JSON decoder to use in calls.
     private let decoder = JSONDecoder()
@@ -94,7 +62,7 @@ struct NetworkLayer: NetworkLayerProtocol {
         }
     }
     
-    func comics() -> AnyPublisher<[Comic], Error> {
+    func getComics() -> AnyPublisher<[Comic], Error> {
         let indexes = indexes()
         var array: [AnyPublisher<Comic, Error>] = []
         for num in indexes {

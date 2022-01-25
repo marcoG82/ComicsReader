@@ -15,7 +15,7 @@ struct ComicsReaderApp: App {
     let searchSettings = SearchSettings()
     @StateObject private var comicsStore: ComicsStore
     @State private var showAlert = false
-    let context = Context(AppConfig())
+//    let context = Context(AppDependencies.configs as! Config)
     private var subscriptions = Set<AnyCancellable>()
     
     init() {

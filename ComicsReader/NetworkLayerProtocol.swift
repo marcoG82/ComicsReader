@@ -8,6 +8,6 @@
 import Foundation
 import Combine
 
-protocol NetworkLayerProtocol {
-    func comics() -> AnyPublisher<[Comic], Error>
-}
+//protocol CRNetworkLayerProtocol {
+//    func getComics() -> AnyPublisher<[Comic], Error>
+//}
