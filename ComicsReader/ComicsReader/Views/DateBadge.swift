@@ -21,13 +21,13 @@ struct DateBadge: View {
     
     var body: some View {
         Text(comicDate(comic))
-            .font(.headline)
-            .fontWeight(.heavy)
-            .padding(10)
+            .font(.caption)
+            .fontWeight(.semibold)
+            .padding(4)
             .foregroundColor(Color.white)
             .background(Color.orange)
             .cornerRadius(6)
-            .frame(idealWidth: 100)
+            .frame(idealWidth: 40)
             .padding(.bottom, 10)
     }
 }
