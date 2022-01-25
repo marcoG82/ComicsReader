@@ -31,11 +31,3 @@ struct DateBadge: View {
             .padding(.bottom, 10)
     }
 }
-
-#if DEBUG
-//struct DateBadge_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DateBadge(comic: )
-//    }
-//}
-#endif

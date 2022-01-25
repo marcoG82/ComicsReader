@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 import ShortcutFoundation
+import ComicReaderNetwork
 
 class MainViewModel: ObservableObject {
 //    @Inject var api: CRNetworkLayerProtocol
@@ -18,6 +19,8 @@ class MainViewModel: ObservableObject {
     @Published private var allComics = [IdentifiableComic]()
     private var subriscrions = Set<AnyCancellable>()
     
+    /// leveraging the allComics array, which is a publisher, we never need to refetch comics to populate views, but we can filter through it
+    /// if filters are active
     var comics: [IdentifiableComic] {
         guard filterString != "" || filterIssue != 0 else {
             return self.allComics
@@ -33,6 +36,7 @@ class MainViewModel: ObservableObject {
         return filteredComics
     }
     
+    /// here we finally handle the publisher coming from the NetworkLayer
     func fetchComics() {
         api
             .getComics()

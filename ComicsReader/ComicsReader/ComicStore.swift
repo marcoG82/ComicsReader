@@ -141,11 +141,11 @@ class ComicsStore: ObservableObject {
         return documentsURL
     }
     
+    ///we use this function in order to avoid that the user can click twice on the favorite button and therefore saving a duplicate
     func shouldFavorite(_ comic: IdentifiableComic) -> Bool {
         guard !allSavedComics.isEmpty else {
             return true
         }
-        
         return !allSavedComics.contains { $0.num == comic.num }
     }
 }

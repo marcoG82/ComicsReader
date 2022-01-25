@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+///Both newSearchText and newSearchIssue are used to filter the always present (in the viewModel)  array of comics. Just never at the same time
 struct SearchView: View {
     @State var newSearchText = ""
     @State var newSearchIssue = ""
@@ -63,9 +64,3 @@ struct SearchView: View {
         }
     }
 }
-
-//struct SearchView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SearchView()
-//    }
-//}

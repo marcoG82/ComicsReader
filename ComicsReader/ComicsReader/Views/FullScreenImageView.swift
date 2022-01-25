@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+///We reuse the same view for showing both the fetched comics and the stored comic images in fullScreen
 struct FullScreenImageView: View {
     let imageUrl: String?
     let comicImage: UIImage?

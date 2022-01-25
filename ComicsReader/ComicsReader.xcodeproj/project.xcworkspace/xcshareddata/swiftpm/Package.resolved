@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "ComicReaderNetwork",
+        "repositoryURL": "https://github.com/marcoG82/ComicReaderNetwork.git",
+        "state": {
+          "branch": null,
+          "revision": "3ddf777c576cc7cd22c8e3d97efc03cfacc6a7de",
+          "version": "1.0.3"
+        }
+      },
+      {
         "package": "ShortcutFoundation",
         "repositoryURL": "https://github.com/shortcut/shortcut-foundation-ios.git",
         "state": {

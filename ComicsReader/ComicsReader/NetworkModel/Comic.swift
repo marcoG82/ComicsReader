@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Comic: Codable {
+public struct Comic: Codable {
     let month: String
     let num: Int
     let link: String
@@ -19,4 +19,6 @@ struct Comic: Codable {
     let img: String
     let title: String
     let day: String
+    
+//    public init () {}
 }

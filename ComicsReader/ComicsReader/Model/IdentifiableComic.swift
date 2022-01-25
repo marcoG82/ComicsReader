@@ -7,6 +7,9 @@
 
 import Foundation
 
+/// This struct is basically the same as 'Comic' in the NetworkLayer but we need to convert
+///                          Comic -> IdentifiableComic
+///in order to present the elements in a SwiftUI list or form that, in fact, accept only elements that conform to Identifiable protocol
 struct IdentifiableComic: Identifiable {
     let id = UUID()
     let month: String
