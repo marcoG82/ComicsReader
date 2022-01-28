@@ -16,7 +16,7 @@ class MainViewModel: ObservableObject {
     @Published var filterIssue = 0
     @Published var error: Error?
     @Published private var allComics = [Comic]()
-    private var subriscrions = Set<AnyCancellable>()
+    private var subscriptions = Set<AnyCancellable>()
     
     /// leveraging the allComics array, which is a publisher, we never need to refetch comics to populate views, but we can filter through it
     /// if filters are active
@@ -49,6 +49,6 @@ class MainViewModel: ObservableObject {
                 self.allComics = comics
                 self.error = nil
             })
-            .store(in: &subriscrions)
+            .store(in: &subscriptions)
     }
 }

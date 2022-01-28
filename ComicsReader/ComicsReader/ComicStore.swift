@@ -20,6 +20,11 @@ class ComicsStore: ObservableObject {
     
     @Published var allSavedComics = [Comic]()
     
+    let prefix = Constants.ComicsStore.imgPrefix
+    let png = Constants.ComicsStore.png
+    let favoritesPath = Constants.ComicsStore.favoritesPath
+    let imagesPath = Constants.ComicsStore.imagesPath
+    
     init(withChecking: Bool) throws {
         do {
             try load()
@@ -41,7 +46,7 @@ class ComicsStore: ObservableObject {
     }
     
     func save(comic: Comic) throws {
-        guard let dataURL = getURL() else {
+        guard let dataURL = getFavoriteComicsURL() else {
             throw LocalStorageError.urlFailure
         }
         storeImage(imageURL: comic.img, title: comic.title)
@@ -71,7 +76,7 @@ class ComicsStore: ObservableObject {
     }
         
     func load() throws {
-        guard let dataURL = getURL() else {
+        guard let dataURL = getFavoriteComicsURL() else {
             throw LocalStorageError.urlFailure
         }
         
@@ -105,14 +110,15 @@ class ComicsStore: ObservableObject {
     }
     
     private func storeImage(imageURL: String, title: String) {
-        if let docURL = getDocumentsURL(), let url = URL(string: imageURL) {
+        if let docURL = getSavedComicImagesURL(), let url = URL(string: imageURL) {
             URLSession.shared.downloadTask(with: url) { location, _, error in
                 guard let location = location else {
                     print("download error:", error ?? "")
                     return
                 }
                 do {
-                    try FileManager.default.moveItem(at: location, to: docURL.appendingPathComponent("ImageComic" + title + ".png"))
+                    try self.createImagesFolder()
+                    try FileManager.default.moveItem(at: location, to: docURL.appendingPathComponent("/" + self.prefix + title + self.png))
                 } catch {
                     print(error)
                 }
@@ -121,25 +127,37 @@ class ComicsStore: ObservableObject {
     }
     
     func getImageFromLocal(_ comic: Comic) -> UIImage {
-        let fileName = "ImageComic" + comic.title + ".png"
-        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! + "/" + fileName
+        let fileName = prefix + comic.title + png
+        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! + "/" + imagesPath + "/" + fileName
         return UIImage(contentsOfFile: path) ?? UIImage()
     }
     
-    private func getURL() -> URL? {
+    private func getFavoriteComicsURL() -> URL? {
         guard let documentsURL = FileManager.default.urls(
             for: .documentDirectory, in: .userDomainMask).first else {
                 return nil
             }
-        return documentsURL.appendingPathComponent("favoriteComics.plist")
+        return documentsURL.appendingPathComponent(favoritesPath)
     }
     
-    private func getDocumentsURL() -> URL? {
+    private func getSavedComicImagesURL() -> URL? {
         guard let documentsURL = FileManager.default.urls(
             for: .documentDirectory, in: .userDomainMask).first else {
                 return nil
             }
-        return documentsURL
+        return documentsURL.appendingPathComponent(imagesPath, isDirectory: true)
+    }
+    
+    private func createImagesFolder() throws {
+        let filemanager = FileManager.default
+        if let path = filemanager.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let newPath = path.appendingPathComponent(imagesPath, isDirectory: true)
+            do {
+                if !filemanager.fileExists(atPath: newPath.absoluteString) {
+                    try filemanager.createDirectory(at: newPath, withIntermediateDirectories: true, attributes: nil)
+                }
+            } catch { throw LocalStorageError.imageSaveFailure }
+        }
     }
     
     ///we use this function in order to avoid that the user can click twice on the favorite button and therefore saving a duplicate
