@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import ComicReaderNetwork
 
 enum LocalStorageError: Error {
     case loadFailure
@@ -17,7 +18,7 @@ enum LocalStorageError: Error {
 
 class ComicsStore: ObservableObject {
     
-    @Published var allSavedComics = [IdentifiableComic]()
+    @Published var allSavedComics = [Comic]()
     
     init(withChecking: Bool) throws {
         do {
@@ -29,7 +30,7 @@ class ComicsStore: ObservableObject {
     
     init() {}
     
-    func addFavoriteComic(comic: IdentifiableComic) {
+    func addFavoriteComic(comic: Comic) {
         let comicToSave = comic
         allSavedComics.append(comicToSave)
         do {
@@ -39,7 +40,7 @@ class ComicsStore: ObservableObject {
         }
     }
     
-    func save(comic: IdentifiableComic) throws {
+    func save(comic: Comic) throws {
         guard let dataURL = getURL() else {
             throw LocalStorageError.urlFailure
         }
@@ -85,7 +86,7 @@ class ComicsStore: ObservableObject {
                 format: nil)
             let convertedPlistData = plistData as? [[Any]] ?? []
             allSavedComics = convertedPlistData.map {
-                IdentifiableComic(
+                Comic(
                     month: $0[0] as? String ?? "",
                     num: $0[1] as? Int ?? 0,
                     link: $0[2] as? String ?? "",
@@ -119,7 +120,7 @@ class ComicsStore: ObservableObject {
         }
     }
     
-    func getImageFromLocal(_ comic: IdentifiableComic) -> UIImage {
+    func getImageFromLocal(_ comic: Comic) -> UIImage {
         let fileName = "ImageComic" + comic.title + ".png"
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! + "/" + fileName
         return UIImage(contentsOfFile: path) ?? UIImage()
@@ -142,7 +143,7 @@ class ComicsStore: ObservableObject {
     }
     
     ///we use this function in order to avoid that the user can click twice on the favorite button and therefore saving a duplicate
-    func shouldFavorite(_ comic: IdentifiableComic) -> Bool {
+    func shouldFavorite(_ comic: Comic) -> Bool {
         guard !allSavedComics.isEmpty else {
             return true
         }

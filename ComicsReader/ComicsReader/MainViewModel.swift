@@ -15,16 +15,16 @@ class MainViewModel: ObservableObject {
     @Published var filterString = String()
     @Published var filterIssue = 0
     @Published var error: Error?
-    @Published private var allComics = [IdentifiableComic]()
+    @Published private var allComics = [Comic]()
     private var subriscrions = Set<AnyCancellable>()
     
     /// leveraging the allComics array, which is a publisher, we never need to refetch comics to populate views, but we can filter through it
     /// if filters are active
-    var comics: [IdentifiableComic] {
+    var comics: [Comic] {
         guard filterString != "" || filterIssue != 0 else {
             return self.allComics
         }
-        var filteredComics = [IdentifiableComic]()
+        var filteredComics = [Comic]()
         if filterString != "" {
             filteredComics = allComics.filter {
                 $0.title.contains(filterString) || $0.alt.contains(filterString) || $0.title.contains(filterString)
@@ -46,21 +46,7 @@ class MainViewModel: ObservableObject {
                     self.error = error
                 }
             }, receiveValue: { comics in
-                for comic in comics {
-                    self.allComics.append(
-                        IdentifiableComic(
-                            month: comic.month,
-                            num: comic.num,
-                            link: comic.link,
-                            year: comic.year,
-                            news: comic.news,
-                            safe_title: comic.safe_title,
-                            transcript: comic.transcript,
-                            alt: comic.alt,
-                            img: comic.img,
-                            title: comic.title,
-                            day: comic.day))
-                }
+                self.allComics = comics
                 self.error = nil
             })
             .store(in: &subriscrions)

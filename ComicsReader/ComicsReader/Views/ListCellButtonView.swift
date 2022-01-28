@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import ComicReaderNetwork
 
 struct ListCellButtonView: View {
-    let comic: IdentifiableComic
+    let comic: Comic
     let model: MainViewModel
     @EnvironmentObject var comicsStore: ComicsStore
     

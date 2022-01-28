@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import ComicReaderNetwork
 
 struct DateBadge: View {
     
-    let comic: IdentifiableComic
+    let comic: Comic
     
-    func comicDate(_ comic: IdentifiableComic) -> String {
+    func comicDate(_ comic: Comic) -> String {
         let day = comic.day.count == 1 ? "0" + comic.day : comic.day
         let month = comic.month.count == 1 ? "0" + comic.month : comic.month
         let year = comic.year

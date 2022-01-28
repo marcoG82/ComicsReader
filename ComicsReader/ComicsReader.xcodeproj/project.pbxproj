@@ -17,7 +17,6 @@
 		42638D7A279FE15400CE97EE /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42638D79279FE15400CE97EE /* FavoriteView.swift */; };
 		42638D7C279FE51800CE97EE /* ComicStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42638D7B279FE51800CE97EE /* ComicStore.swift */; };
 		426C2B8127A0301B00FA498D /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426C2B8027A0301B00FA498D /* AppDependencies.swift */; };
-		426C2B8327A0481900FA498D /* IdentifiableComic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426C2B8227A0481900FA498D /* IdentifiableComic.swift */; };
 		426C2B9227A064EC00FA498D /* ComicReaderNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 426C2B9127A064EC00FA498D /* ComicReaderNetwork */; };
 		426C2B9B27A0860300FA498D /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426C2B9A27A0860300FA498D /* AppConfig.swift */; };
 		426C2B9F27A08D7500FA498D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 426C2B9E27A08D7500FA498D /* README.md */; };
@@ -62,7 +61,6 @@
 		42638D79279FE15400CE97EE /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		42638D7B279FE51800CE97EE /* ComicStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicStore.swift; sourceTree = "<group>"; };
 		426C2B8027A0301B00FA498D /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
-		426C2B8227A0481900FA498D /* IdentifiableComic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableComic.swift; sourceTree = "<group>"; };
 		426C2B9A27A0860300FA498D /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		426C2B9E27A08D7500FA498D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		427E8E12279D8D9C00F2DF3E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -77,6 +75,7 @@
 		428401032799AFD600DDD871 /* ComicsReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsReaderTests.swift; sourceTree = "<group>"; };
 		428401092799AFD600DDD871 /* ComicsReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComicsReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4284011D2799CC0800DDD871 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		42AA1CDF27A43EA5008F8B7C /* ComicReaderNetwork */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ComicReaderNetwork; path = ../../ComicsFrameworks/ComicReaderNetwork; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,17 +128,10 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		426C2B8427A0483B00FA498D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				426C2B8227A0481900FA498D /* IdentifiableComic.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		428400E62799AFD300DDD871 = {
 			isa = PBXGroup;
 			children = (
+				42AA1CDF27A43EA5008F8B7C /* ComicReaderNetwork */,
 				428400F12799AFD300DDD871 /* ComicsReader */,
 				428401022799AFD600DDD871 /* ComicsReaderTests */,
 				4284011D2799CC0800DDD871 /* .swiftlint.yml */,
@@ -164,7 +156,6 @@
 				428400F22799AFD300DDD871 /* ComicsReaderApp.swift */,
 				42638D6E279EC96300CE97EE /* Views */,
 				42638D6D279EC93C00CE97EE /* Search */,
-				426C2B8427A0483B00FA498D /* Model */,
 				42638D75279ECC5900CE97EE /* CTAButton.swift */,
 				427E8E12279D8D9C00F2DF3E /* MainViewModel.swift */,
 				42638D7B279FE51800CE97EE /* ComicStore.swift */,
@@ -356,7 +347,6 @@
 			files = (
 				42638D6C279EC92B00CE97EE /* SearchView.swift in Sources */,
 				42638D74279ECA2C00CE97EE /* ListCellButtonView.swift in Sources */,
-				426C2B8327A0481900FA498D /* IdentifiableComic.swift in Sources */,
 				42638D7C279FE51800CE97EE /* ComicStore.swift in Sources */,
 				42638D72279EC9FF00CE97EE /* ListCellContentView.swift in Sources */,
 				42638D76279ECC5900CE97EE /* CTAButton.swift in Sources */,

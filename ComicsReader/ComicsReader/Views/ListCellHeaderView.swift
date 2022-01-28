@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import ComicReaderNetwork
 
 struct ListCellHeaderView: View {
-    let comic: IdentifiableComic
+    let comic: Comic
     
     var body: some View {
         HStack {
